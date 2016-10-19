@@ -1,0 +1,13 @@
+<project default="compile">
+    <target name="compile">
+        <delete>
+            <fileset dir="bin" includes="*"/>
+        </delete>
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin" includeantruntime="false"/>
+        <echo file="run.bat" append="false">
+            cd bin
+            java TriangleMath
+        </echo>
+    </target>
+</project>
